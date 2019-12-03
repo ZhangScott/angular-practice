@@ -116,6 +116,7 @@
     justify-content: space-between;
     align-items: center;
   }
+  @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
   
   app-top-bar h1 {
     color: white;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
-import { fbind } from 'q';
+import { forbiddenNameValidator } from '../shared/forbidden-name.directive';
 
 @Component({
   selector: 'app-customer-profile',
@@ -9,7 +9,10 @@ import { fbind } from 'q';
 })
 export class CustomerProfileComponent implements OnInit {
   profileForm = this.fb.group({
-    firstName: ['test', Validators.required],
+    firstName: ['test',
+      [Validators.required,
+      Validators.maxLength(4),
+      forbiddenNameValidator(/bob/i)]],
     lastName: ['last name'],
     address: this.fb.group({
       street: ['street'],
@@ -47,4 +50,11 @@ export class CustomerProfileComponent implements OnInit {
   addAlias(): void {
     this.aliases.push(new FormControl(''));
   }
+
+  get firstName() { return this.profileForm.get('firstName'); }
+
+  get power() { return this.profileForm.get('power'); }
+  
+  get diagnostic() {return JSON.stringify(this.firstName.errors); }
 }
+

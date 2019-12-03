@@ -8,8 +8,11 @@
         First Name:
         <input type="text" formControlName="firstName">
     </label>
-    <div *ngIf="!this.profileForm.get('firstName').valid">
-        required field!
+    <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+        {{ diagnostic }}
+        <div *ngIf="firstName.errors.required"> Name is required</div>
+        <div *ngIf="firstName.errors.maxlength">Name must be at least 4 chars long.</div>
+        <div *ngIf="firstName.errors.forbiddenName">Name cannot be Bob</div>
     </div>
     <label>
         Last Name:

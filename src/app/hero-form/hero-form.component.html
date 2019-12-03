@@ -4,11 +4,16 @@
           {{ diagnostic }}
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" required
+            <input type="text" class="form-control" id="name"
+              required
+              minlength="4"
+              appForbiddenName="bob"
             [(ngModel)]="model.name" name="name" #spy #name="ngModel">     
-            <div [hidden]="name.valid || name.pristine"
-              class="alert alert-danger">
-              Name is required
+            <div *ngIf="name.invalid && (name.dirty || name.touched)"
+            class="alert alert-danger">
+              <div *ngIf="name.errors.required"> Name is required</div>
+              <div *ngIf="name.errors.minlength">Name must be at least 4 chars long.</div>
+              <div *ngIf="name.errors.forbiddenName">Name cannot be Bob</div>
             </div>
             <p>
                 TODO: remove this: {{ model.name }}

@@ -12,6 +12,7 @@ import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { ForbiddenValidatorDirective } from './shared/forbidden-name.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
     CartComponent,
     ShippingComponent,
     CustomerProfileComponent,
-    HeroFormComponent
+    HeroFormComponent,
+    ForbiddenValidatorDirective
   ],
   imports: [
     BrowserModule,

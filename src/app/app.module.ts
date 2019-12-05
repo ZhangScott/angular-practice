@@ -13,6 +13,7 @@ import { ShippingComponent } from './shipping/shipping.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { ForbiddenValidatorDirective } from './shared/forbidden-name.directive';
+import { IdentityRevealedValidatorDirective } from './shared/identity-revealed-validator.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ForbiddenValidatorDirective } from './shared/forbidden-name.directive';
     ShippingComponent,
     CustomerProfileComponent,
     HeroFormComponent,
-    ForbiddenValidatorDirective
+    ForbiddenValidatorDirective,
+    IdentityRevealedValidatorDirective
   ],
   imports: [
     BrowserModule,

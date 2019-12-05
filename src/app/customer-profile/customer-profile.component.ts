@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 import { forbiddenNameValidator } from '../shared/forbidden-name.directive';
+import { identityRevealedValidator } from '../shared/identity-revealed-validator.directive';
 
 @Component({
   selector: 'app-customer-profile',

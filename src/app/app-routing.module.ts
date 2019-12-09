@@ -6,6 +6,7 @@ import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { DynamicFormHostComponent } from './dynamic-form-host/dynamic-form-host.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'shipping', component: ShippingComponent },
   { path: 'customerprofile', component: CustomerProfileComponent },
-  { path: 'heroform', component: HeroFormComponent }
+  { path: 'heroform', component: HeroFormComponent },
+  { path: 'dynamicform', component: DynamicFormHostComponent }
 ];
 
 @NgModule({

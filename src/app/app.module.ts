@@ -14,6 +14,9 @@ import { CustomerProfileComponent } from './customer-profile/customer-profile.co
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { ForbiddenValidatorDirective } from './shared/forbidden-name.directive';
 import { IdentityRevealedValidatorDirective } from './shared/identity-revealed-validator.directive';
+import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-form-question.component';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { DynamicFormHostComponent } from './dynamic-form-host/dynamic-form-host.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { IdentityRevealedValidatorDirective } from './shared/identity-revealed-v
     CustomerProfileComponent,
     HeroFormComponent,
     ForbiddenValidatorDirective,
-    IdentityRevealedValidatorDirective
+    IdentityRevealedValidatorDirective,
+    DynamicFormQuestionComponent,
+    DynamicFormComponent,
+    DynamicFormHostComponent
   ],
   imports: [
     BrowserModule,
